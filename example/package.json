@@ -15,15 +15,15 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
-    "autoprefixer": "^9.6.1",
     "cosova": "^0.1.0",
-    "postcss-modules": "^1.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@types/react": "^16.8.13",
     "@types/react-dom": "^16.8.3",
-    "parcel-bundler": "^1.12.3"
+    "autoprefixer": "^9.6.1",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1"
   }
 }

@@ -5,14 +5,9 @@ import React, {
   CSSProperties,
 } from 'react';
 
-import { BubbleComponent, Bubble } from './bubble-component';
-import {
-  getNextId,
-  getRandomItemFormArray,
-  CosovaPropType,
-  getProp,
-} from './utils';
-import { cosovaReducer } from './cosova-reducer';
+import { BubbleComponent, Bubble } from './bubble';
+import { getNextId, getRandomItemFormArray } from './utils';
+import { cosovaReducer } from './reducer';
 
 const DEFAULT_COSOVAS = [
   '富强',
@@ -30,15 +25,22 @@ const DEFAULT_COSOVAS = [
 ];
 
 const DEFAULT_DURATION = 800;
-
+const DEFAULT_TIMING = 'ease-out';
 const DEFAULT_INITIAL_STYLE: CSSProperties = {};
-
 const DEFAULT_TRANSITION_STYLE: CSSProperties = {
   opacity: 0,
   transform: 'translate(0, -30px)',
 };
 
-const DEFAULT_TIMING = 'ease-out';
+type CosovaPropType<T> = T | (() => T);
+
+function getProp<T>(prop: CosovaPropType<T>): T {
+  if (typeof prop === 'function') {
+    return (prop as Function)();
+  } else {
+    return prop;
+  }
+}
 
 export interface CosovaProps
   extends React.DetailedHTMLProps<
@@ -67,12 +69,11 @@ export const Cosova: React.FC<CosovaProps> = function({
 
   ...restProps
 }) {
-  const cosovas = getProp(cosovaProp);
-
   const [state, dispatch] = useReducer(cosovaReducer, { bubbles: [] });
 
   const onWrapperClick = useCallback(
     (event: MouseEvent<HTMLDivElement>) => {
+      const cosovas = getProp(cosovaProp);
       const duration = getProp(durationPorp);
       const initialStyle = getProp(initialStyleProp);
       const transitionStyle = getProp(transitionStyleProp);
@@ -111,7 +112,7 @@ export const Cosova: React.FC<CosovaProps> = function({
       }
     },
     [
-      cosovas,
+      cosovaProp,
       durationPorp,
       initialStyleProp,
       onClick,

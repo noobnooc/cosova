@@ -1,5 +1,3 @@
-export type CosovaPropType<T> = T | (() => T);
-
 const GLOBAL_STATE = {
   id: 0,
 };
@@ -16,12 +14,4 @@ export function convertDurationToTransitionAvilableDuration(
   duration: number,
 ): string {
   return `${duration / 1000}s`;
-}
-
-export function getProp<T>(prop: CosovaPropType<T>): T {
-  if (typeof prop === 'function') {
-    return (prop as Function)();
-  } else {
-    return prop;
-  }
 }

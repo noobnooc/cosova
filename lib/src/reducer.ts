@@ -1,4 +1,4 @@
-import { Bubble } from './bubble-component';
+import { Bubble } from './bubble';
 
 export interface CosovaState {
   bubbles: Bubble[];

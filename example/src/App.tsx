@@ -44,7 +44,8 @@ export const App: React.FC = () => {
             opacity: 0,
             transform: 'scale(2)',
           }}
-          timing="cubic-bezier(0.19,-0.8, 1, 1)"
+          timing="cubic-bezier(0,-1, 1, 1)"
+          duration={500}
           onClick={event => event.stopPropagation()}
         >
           再试试我呢, 我可和楼上不一样哦!
@@ -52,6 +53,9 @@ export const App: React.FC = () => {
         <h3 className={styles.subTitle}>非主流样式</h3>
         <Cosova
           className={styles.demoBox}
+          style={{
+            overflow: 'hidden',
+          }}
           cosovas={[
             '曾經很愛很愛伱..侞妗.o┈]我努力放棄多谢╰伱啲Οo絕.情讓我學会~死心',
             '「.我德存在织伪铕个顠亮的死法.﹖; !',
