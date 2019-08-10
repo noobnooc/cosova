@@ -4,6 +4,10 @@
   "repository": "https://github.com/hardo/cosova",
   "author": "Hardo <i@hardo.me>",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn workspace cosova build",
+    "publish": "yarn workspace cosova publish"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
