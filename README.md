@@ -2,23 +2,47 @@
 
 **Co**re **So**cialist **Va**lues Bubble Component for React.
 
-## [Examples](https://hardo.github.io/cosova/)
+## Examples ([website](https://hardo.github.io/cosova/))
+
+![](images/normal.gif)
 
 ## Usage
 
 ### Get Start
 
+- Install
+
+```bash
+yarn add cosova
+
+# or:
+# npm install cosova
+```
+- import 
+
+```js
+import {Cosova} from 'cosova';
+
+function () {
+  return <Cosova />
+}
+```
+
+### Code examples
+
+#### Normal
+  
 - Code
 
 ```jsx
-<Cosova> 请使劲地蹂躏我吧 ~ </Cosova>
+<Cosova> 请使劲地点我吧 ~ </Cosova>
 ```
 
 - Effect
 
 ![](images/normal.gif)
 
-### Custom styles
+#### Custom styles
 
 - Code
 
@@ -39,7 +63,7 @@
 
 ![](images/custom.gif)
 
-## More custom
+#### More custom
 
 - Code
 
@@ -63,7 +87,7 @@
       'scale(2)',
       'scale(2, 0)',
       'skew(30deg, 20deg)',
-      'retate(360deg)',
+      'rotate(360deg)',
     ]),
   })}
 >

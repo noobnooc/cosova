@@ -70,7 +70,7 @@ export const App: React.FC = () => {
               'scale(2)',
               'scale(2, 0)',
               'skew(30deg, 20deg)',
-              'retate(360deg)',
+              'rotate(360deg)',
             ]),
           })}
           onClick={event => event.stopPropagation()}
