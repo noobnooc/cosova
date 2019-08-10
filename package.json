@@ -6,7 +6,11 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn workspace cosova build",
-    "publish": "yarn workspace cosova publish",
+    "publish": "./publish.sh",
+    "type-check": "yarn workspace cosova type-check && yarn workspace example type-check",
+    "lint": "yarn workspace cosova lint && yarn workspace example lint",
+    "format": "yarn workspace cosova format && yarn workspace example format",
+    "watch:example": "yarn workspace example watch",
     "deploy:example": "yarn workspace example deploy"
   },
   "devDependencies": {
@@ -24,6 +28,5 @@
       "lib",
       "example"
     ]
-  },
-  "version": "0.0.1"
+  }
 }

@@ -38,7 +38,7 @@ export const App: React.FC = () => {
         <h3 className={styles.subTitle}>魔改样式</h3>
         <Cosova
           className={styles.demoBox}
-          cosovas={['阔口阔啰', '哇蛤蛤', '卖洞', '茶几']}
+          cosovas={['阔口阔啰', '哇蛤蛤', '卖洞', '茶几', '七夕', '血碧']}
           initialStyle={{ color: '#fafafa' }}
           transitionStyle={{
             opacity: 0,
