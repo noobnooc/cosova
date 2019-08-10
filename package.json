@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn workspace cosova build",
-    "publish": "./publish.sh",
+    "publish:lib": "./publish.sh",
     "type-check": "yarn workspace cosova type-check && yarn workspace example type-check",
     "lint": "yarn workspace cosova lint && yarn workspace example lint",
     "format": "yarn workspace cosova format && yarn workspace example format",
