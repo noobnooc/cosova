@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  padding: 50px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.titleLink {
+  margin-left: 20px;
+}
+
+.subTitle {
+  margin: 20px 0 10px 0;
+}
+
+.demoBox {
+  height: 200px;
+  background-color: #1f1f1f;
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

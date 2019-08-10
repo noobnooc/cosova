@@ -1,0 +1,30 @@
+{
+  "name": "cosova",
+  "version": "0.1.0",
+  "description": "Core Socialist Values Bubble",
+  "repository": "https://github.com/hardo/cosova",
+  "author": "Hardo <i@hardo.me>",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" && prettier --list-different \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

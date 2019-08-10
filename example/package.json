@@ -1,0 +1,28 @@
+{
+  "name": "example",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Core Socialist Values Bubble Example",
+  "repository": "https://github.com/hardo/cosova",
+  "author": "Hardo <i@hardo.me>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "parcel src/index.html",
+    "build": "rimraf dist && parcel build src/index.html --out-dir dist",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" && prettier --list-different \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "cosova": "^0.1.0",
+    "postcss-modules": "^1.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.3",
+    "parcel-bundler": "^1.12.3"
+  }
+}
