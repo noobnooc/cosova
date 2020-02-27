@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "watch": "parcel src/index.html",
-    "build": "rimraf dist && parcel build src/index.html --out-dir dist --public-url /cosova/",
+    "build": "rimraf dist && parcel build src/index.html --out-dir dist",
     "deploy": "yarn build && ./deploy.sh",
     "type-check": "tsc --noEmit",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" && prettier --list-different \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
